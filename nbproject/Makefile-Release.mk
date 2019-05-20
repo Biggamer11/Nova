@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Engine/Engine.o \
+	${OBJECTDIR}/Engine/Graphics/Graphics.o \
 	${OBJECTDIR}/Engine/Init.o \
 	${OBJECTDIR}/Engine/Window.o \
 	${OBJECTDIR}/Game.o \
@@ -70,6 +71,11 @@ ${OBJECTDIR}/Engine/Engine.o: Engine/Engine.cpp
 	${MKDIR} -p ${OBJECTDIR}/Engine
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Engine/Engine.o Engine/Engine.cpp
+
+${OBJECTDIR}/Engine/Graphics/Graphics.o: Engine/Graphics/Graphics.cpp
+	${MKDIR} -p ${OBJECTDIR}/Engine/Graphics
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Engine/Graphics/Graphics.o Engine/Graphics/Graphics.cpp
 
 ${OBJECTDIR}/Engine/Init.o: Engine/Init.cpp
 	${MKDIR} -p ${OBJECTDIR}/Engine

@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>Engine/Engine.h</itemPath>
       <itemPath>Game.h</itemPath>
+      <itemPath>Engine/Graphics/Graphics.h</itemPath>
       <itemPath>Engine/Init.h</itemPath>
       <itemPath>Engine/Window.h</itemPath>
     </logicalFolder>
@@ -18,6 +19,7 @@
                    projectFiles="true">
       <itemPath>Engine/Engine.cpp</itemPath>
       <itemPath>Game.cpp</itemPath>
+      <itemPath>Engine/Graphics/Graphics.cpp</itemPath>
       <itemPath>Engine/Init.cpp</itemPath>
       <itemPath>Engine/Window.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -62,6 +64,10 @@
       <item path="Engine/Engine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Engine/Engine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Engine/Graphics/Graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Engine/Graphics/Graphics.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Engine/Init.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -114,6 +120,10 @@
       <item path="Engine/Engine.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Engine/Engine.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Engine/Graphics/Graphics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Engine/Graphics/Graphics.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Engine/Init.cpp" ex="false" tool="1" flavor2="0">
       </item>
