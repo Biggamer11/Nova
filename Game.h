@@ -14,6 +14,8 @@
 #ifndef GAME_H
 #include <SDL2/SDL.h>
 #include "Engine/Engine.h"
+#include <iostream>
+#include <cstdlib>
 #define GAME_H
 
 

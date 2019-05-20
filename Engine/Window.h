@@ -13,23 +13,30 @@
 
 #ifndef WINDOW_H
 #include <SDL2/SDL.h>
+#include <iostream>
+#include <cstdlib>
 #define WINDOW_H
 
 class Window {
 public:
-    SDL_Window* window = NULL;
-    SDL_Renderer* renderer = NULL;
     int createWindow();
     void distroyWindow();
     
     SDL_Window* getWindow();
     SDL_Renderer* getRenderer();
+    
+    void blankScreen();
 
+    void setRes(int x, int y);
+    void setTitle(char* title);
     
     Window();
     Window(const Window& orig);
     virtual ~Window();
+    
 private:
+    SDL_Window* window = NULL;
+    SDL_Renderer* renderer = NULL;
     
 };
 

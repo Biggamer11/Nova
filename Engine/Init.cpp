@@ -36,6 +36,13 @@ int Init::run() {
     }
     
     engine.window.createWindow();
+    SDL_SetRenderDrawColor(engine.window.getRenderer(), 0, 0, 0, 255);
+    // Clear the entire screen to our selected color.
+    SDL_RenderClear(engine.window.getRenderer());
+
+    // Up until now everything was drawn behind the scenes.
+    // This will show the new, red contents of the window.
+    SDL_RenderPresent(engine.window.getRenderer());
     game.run();
     
     SDL_Quit();

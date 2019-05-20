@@ -31,7 +31,8 @@ Game::Game(Engine* eng){
 
 int Game::run() {
     SDL_Delay(2000);
-    SDL_SetWindowSize(engine->window.getWindow(), 1920,1080);
+    engine->window.setRes(220,220);
+    engine->window.setTitle("this is so cool");
     SDL_Delay(2000);
     return 0;
 }

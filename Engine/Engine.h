@@ -13,11 +13,13 @@
 
 #ifndef ENGINE_H
 #include "Window.h"
+#include "Graphics/Graphics.h"
 #define ENGINE_H
 
 class Engine {
 public:
     Window window;
+    Graphics graphics;
     Engine();
     Engine(const Engine& orig);
     virtual ~Engine();
