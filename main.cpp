@@ -14,15 +14,15 @@
 #include <cstdlib>
 #include <string>
 #include <iostream>
+#include "Init.h"
 
-
-using namespace std;
+Init init;
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-    cout << "this is a test";
-    return 0;
+    std::cout << init.run();
+    
 }
 
