@@ -1,9 +1,15 @@
-build/Debug/GNU-Linux/main.o: main.cpp Init.h Window.h Game.h Engine.h
+build/Debug/GNU-Linux/main.o: main.cpp Engine/Init.h Engine/Window.h \
+ Engine/../Game.h Engine/../Engine/Engine.h Engine/../Engine/Window.h \
+ Engine/Engine.h
 
-Init.h:
+Engine/Init.h:
 
-Window.h:
+Engine/Window.h:
 
-Game.h:
+Engine/../Game.h:
 
-Engine.h:
+Engine/../Engine/Engine.h:
+
+Engine/../Engine/Window.h:
+
+Engine/Engine.h:

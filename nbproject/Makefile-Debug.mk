@@ -35,10 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Engine.o \
+	${OBJECTDIR}/Engine/Engine.o \
+	${OBJECTDIR}/Engine/Init.o \
+	${OBJECTDIR}/Engine/Window.o \
 	${OBJECTDIR}/Game.o \
-	${OBJECTDIR}/Init.o \
-	${OBJECTDIR}/Window.o \
 	${OBJECTDIR}/main.o
 
 
@@ -66,25 +66,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nova: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/nova ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Engine.o: Engine.cpp
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/Engine/Engine.o: Engine/Engine.cpp
+	${MKDIR} -p ${OBJECTDIR}/Engine
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Engine.o Engine.cpp
+	$(COMPILE.cc) -g -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Engine/Engine.o Engine/Engine.cpp
+
+${OBJECTDIR}/Engine/Init.o: Engine/Init.cpp
+	${MKDIR} -p ${OBJECTDIR}/Engine
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Engine/Init.o Engine/Init.cpp
+
+${OBJECTDIR}/Engine/Window.o: Engine/Window.cpp
+	${MKDIR} -p ${OBJECTDIR}/Engine
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Engine/Window.o Engine/Window.cpp
 
 ${OBJECTDIR}/Game.o: Game.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Game.o Game.cpp
-
-${OBJECTDIR}/Init.o: Init.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Init.o Init.cpp
-
-${OBJECTDIR}/Window.o: Window.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Window.o Window.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

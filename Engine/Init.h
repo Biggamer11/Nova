@@ -19,7 +19,7 @@
 #include <GL/gl.h>
 #include <SDL2/SDL.h>
 #include "Window.h"
-#include "Game.h"
+#include "../Game.h"
 #include "Engine.h"
 #define INIT_H
 
